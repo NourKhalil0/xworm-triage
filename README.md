@@ -2,8 +2,6 @@
 
 This is a full triage of one malware sample. This repo shows everything I did, in order, with screenshots and diagrams. For each step I write what I did, why I did it, and what it means.
 
-Everything ran inside a safe lab. The sample never touched the real internet or my real computer.
-
 ---
 
 ## Verdict
