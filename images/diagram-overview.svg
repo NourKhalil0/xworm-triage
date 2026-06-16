@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1110" height="360" viewBox="0 0 1110 360" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1110" height="360" fill="#ffffff"/>
+
+  <!-- survives-reboot feedback loop (Persistence -> Execution) -->
+  <path d="M325 139 C325 74 100 74 100 139" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M95 131 L100 140 L105 131" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="212" y="70" font-size="12.5" font-style="italic" fill="#7d838a" text-anchor="middle">survives reboot</text>
+
+  <!-- connector arrows (colored to the phase they enter) -->
+  <path d="M154 185 L271 185 M262 179 L272 185 L262 191" fill="none" stroke="#DC3F52" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M379 185 L496 185 M487 179 L497 185 L487 191" fill="none" stroke="#3599B1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M604 185 L721 185 M712 179 L722 185 L712 191" fill="none" stroke="#30679D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M829 185 L946 185 M937 179 L947 185 L937 191" fill="none" stroke="#1A4B6C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ===== Phase 1: Execution (yellow) ===== -->
+  <circle cx="100" cy="185" r="46" fill="#FAB94D"/>
+  <circle cx="100" cy="185" r="40" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+  <path d="M91 169 L91 203 L99 196 L104 207 L109 205 L104 194 L113 194 Z" fill="#ffffff"/>
+  <circle cx="132" cy="153" r="14" fill="#ffffff"/>
+  <text x="132" y="158" font-size="12.5" font-weight="bold" fill="#FAB94D" text-anchor="middle">01</text>
+  <text x="100" y="266" font-size="14.5" font-weight="bold" fill="#23303a" text-anchor="middle">Execution</text>
+  <text x="100" y="285" font-size="11.5" fill="#666666" text-anchor="middle">
+    <tspan x="100" dy="0">User runs the file.</tspan>
+    <tspan x="100" dy="14">The loader (stage 1) starts.</tspan>
+  </text>
+
+  <!-- ===== Phase 2: Persistence (red) ===== -->
+  <circle cx="325" cy="185" r="46" fill="#DC3F52"/>
+  <circle cx="325" cy="185" r="40" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+  <g transform="translate(325,185)" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="0" r="14"/>
+    <path d="M0 0 L0 -8 M0 0 L7 3"/>
+  </g>
+  <circle cx="357" cy="153" r="14" fill="#ffffff"/>
+  <text x="357" y="158" font-size="12.5" font-weight="bold" fill="#DC3F52" text-anchor="middle">02</text>
+  <text x="325" y="266" font-size="14.5" font-weight="bold" fill="#23303a" text-anchor="middle">Persistence</text>
+  <text x="325" y="285" font-size="11.5" fill="#666666" text-anchor="middle">
+    <tspan x="325" dy="0">Copies itself to a hidden folder</tspan>
+    <tspan x="325" dy="14">and adds a logon scheduled task.</tspan>
+  </text>
+
+  <!-- ===== Phase 3: Unpack (teal) ===== -->
+  <circle cx="550" cy="185" r="46" fill="#3599B1"/>
+  <circle cx="550" cy="185" r="40" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+  <g transform="translate(550,185)" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-10" y="-1" width="20" height="15" rx="2"/>
+    <path d="M-6 -1 L-6 -9 A6 6 0 0 1 6 -9"/>
+    <path d="M0 4 L0 9"/>
+  </g>
+  <circle cx="582" cy="153" r="14" fill="#ffffff"/>
+  <text x="582" y="158" font-size="12.5" font-weight="bold" fill="#3599B1" text-anchor="middle">03</text>
+  <text x="550" y="266" font-size="14.5" font-weight="bold" fill="#23303a" text-anchor="middle">Unpack</text>
+  <text x="550" y="285" font-size="11.5" fill="#666666" text-anchor="middle">
+    <tspan x="550" dy="0">Decrypts a hidden stage 2</tspan>
+    <tspan x="550" dy="14">in memory.</tspan>
+  </text>
+
+  <!-- ===== Phase 4: Inject (blue) ===== -->
+  <circle cx="775" cy="185" r="46" fill="#30679D"/>
+  <circle cx="775" cy="185" r="40" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+  <g transform="translate(775,185)" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 -12 L15 -12 L15 12 L3 12"/>
+    <path d="M-15 0 L7 0 M1 -6 L7 0 L1 6"/>
+  </g>
+  <circle cx="807" cy="153" r="14" fill="#ffffff"/>
+  <text x="807" y="158" font-size="12.5" font-weight="bold" fill="#30679D" text-anchor="middle">04</text>
+  <text x="775" y="266" font-size="14.5" font-weight="bold" fill="#23303a" text-anchor="middle">Inject</text>
+  <text x="775" y="285" font-size="11.5" fill="#666666" text-anchor="middle">
+    <tspan x="775" dy="0">Hollows a normal process,</tspan>
+    <tspan x="775" dy="14">hides the RAT inside it.</tspan>
+  </text>
+
+  <!-- ===== Phase 5: C2 Beacon (navy) ===== -->
+  <circle cx="1000" cy="185" r="46" fill="#1A4B6C"/>
+  <circle cx="1000" cy="185" r="40" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+  <g transform="translate(1000,185)" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 14 L0 -5"/>
+    <path d="M-6 14 L6 14"/>
+    <circle cx="0" cy="-9" r="2.2" fill="#ffffff" stroke="none"/>
+    <path d="M-5 -2 A8 8 0 0 1 -5 -16 M5 -2 A8 8 0 0 0 5 -16"/>
+    <path d="M-10 2 A13 13 0 0 1 -10 -20 M10 2 A13 13 0 0 0 10 -20"/>
+  </g>
+  <circle cx="1032" cy="153" r="14" fill="#ffffff"/>
+  <text x="1032" y="158" font-size="12.5" font-weight="bold" fill="#1A4B6C" text-anchor="middle">05</text>
+  <text x="1000" y="266" font-size="14.5" font-weight="bold" fill="#23303a" text-anchor="middle">C2 Beacon</text>
+  <text x="1000" y="285" font-size="11.5" fill="#666666" text-anchor="middle">
+    <tspan x="1000" dy="0">The RAT beacons to</tspan>
+    <tspan x="1000" dy="14">217.195.153.81:50000.</tspan>
+  </text>
+</svg>

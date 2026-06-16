@@ -1,0 +1,11 @@
+# XWorm triage - blocklist
+# Network indicators for blocking / detection.
+
+# C2 server
+217.195.153.81
+
+# C2 endpoint (ip:port)
+217.195.153.81:50000
+
+# File hashes (SHA256)
+0AF84CC7993EB64D51A1CE695C43749E1635B5040F17D6CAE1DA4B574DC88658

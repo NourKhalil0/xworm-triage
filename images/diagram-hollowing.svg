@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1110" height="432" viewBox="0 0 1110 432" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1110" height="432" fill="#ffffff"/>
+
+  <!-- big forward arrow behind card 5 -->
+  <path d="M1032 104 L1094 182 L1032 260 Z" fill="#1A4B6C"/>
+
+  <!-- ===== Card 1: Start host (yellow) ===== -->
+  <rect x="28" y="30" width="188" height="362" rx="3" fill="#E8E8E8"/>
+  <rect x="28" y="132" width="188" height="100" fill="#FAB94D"/>
+  <rect x="28" y="400" width="188" height="5" rx="2" fill="#FAB94D"/>
+  <g transform="translate(122,80)" fill="none" stroke="#FAB94D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-22" y="-17" width="44" height="34" rx="3"/>
+    <path d="M-22 -7 L22 -7"/>
+    <path d="M-5 -1 L9 6 L-5 13 Z" fill="#FAB94D" stroke="none"/>
+  </g>
+  <circle cx="61" cy="182" r="19" fill="none" stroke="#ffffff" stroke-width="2.4"/>
+  <text x="61" y="187" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">01</text>
+  <text x="88" y="188" font-size="16.5" font-weight="bold" fill="#ffffff">Start host</text>
+  <text x="122" y="266" font-size="11" fill="#555555" text-anchor="middle">
+    <tspan x="122" dy="0">Start a normal</tspan>
+    <tspan x="122" dy="15">Windows process in</tspan>
+    <tspan x="122" dy="15">a suspended state.</tspan>
+  </text>
+
+  <!-- ===== Card 2: Hollow it (red) ===== -->
+  <rect x="232" y="30" width="188" height="362" rx="3" fill="#E8E8E8"/>
+  <rect x="232" y="132" width="188" height="100" fill="#DC3F52"/>
+  <rect x="232" y="400" width="188" height="5" rx="2" fill="#DC3F52"/>
+  <g transform="translate(326,80)" fill="none" stroke="#DC3F52" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-20" y="-17" width="40" height="34" rx="3"/>
+    <rect x="-10" y="-8" width="20" height="16" rx="1" stroke-dasharray="3 3"/>
+  </g>
+  <circle cx="265" cy="182" r="19" fill="none" stroke="#ffffff" stroke-width="2.4"/>
+  <text x="265" y="187" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">02</text>
+  <text x="292" y="188" font-size="16.5" font-weight="bold" fill="#ffffff">Hollow it</text>
+  <text x="326" y="266" font-size="11" fill="#555555" text-anchor="middle">
+    <tspan x="326" dy="0">Unmap the original</tspan>
+    <tspan x="326" dy="15">code to make room</tspan>
+    <tspan x="326" dy="15">inside the process.</tspan>
+  </text>
+
+  <!-- ===== Card 3: Write RAT (teal) ===== -->
+  <rect x="436" y="30" width="188" height="362" rx="3" fill="#E8E8E8"/>
+  <rect x="436" y="132" width="188" height="100" fill="#3599B1"/>
+  <rect x="436" y="400" width="188" height="5" rx="2" fill="#3599B1"/>
+  <g transform="translate(530,80)" fill="none" stroke="#3599B1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 -16 L20 -16 L20 16 L4 16"/>
+    <path d="M-20 0 L10 0 M3 -7 L10 0 L3 7"/>
+  </g>
+  <circle cx="469" cy="182" r="19" fill="none" stroke="#ffffff" stroke-width="2.4"/>
+  <text x="469" y="187" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">03</text>
+  <text x="496" y="188" font-size="16.5" font-weight="bold" fill="#ffffff">Write RAT</text>
+  <text x="530" y="266" font-size="11" fill="#555555" text-anchor="middle">
+    <tspan x="530" dy="0">Copy the real RAT into</tspan>
+    <tspan x="530" dy="15">the empty space with</tspan>
+    <tspan x="530" dy="15">WriteProcessMemory.</tspan>
+  </text>
+
+  <!-- ===== Card 4: Redirect (blue) ===== -->
+  <rect x="640" y="30" width="188" height="362" rx="3" fill="#E8E8E8"/>
+  <rect x="640" y="132" width="188" height="100" fill="#30679D"/>
+  <rect x="640" y="400" width="188" height="5" rx="2" fill="#30679D"/>
+  <g transform="translate(734,80)" fill="none" stroke="#30679D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-20" y="-18" width="40" height="30" rx="3"/>
+    <path d="M0 12 L0 17 M-8 17 L8 17"/>
+    <path d="M-11 -9 L7 -9 M2 -13 L8 -9 L2 -5"/>
+    <path d="M11 1 L-7 1 M-2 -3 L-8 1 L-2 5"/>
+  </g>
+  <circle cx="673" cy="182" r="19" fill="none" stroke="#ffffff" stroke-width="2.4"/>
+  <text x="673" y="187" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">04</text>
+  <text x="700" y="188" font-size="16.5" font-weight="bold" fill="#ffffff">Redirect</text>
+  <text x="734" y="266" font-size="11" fill="#555555" text-anchor="middle">
+    <tspan x="734" dy="0">Point the thread to</tspan>
+    <tspan x="734" dy="15">the RAT's entry point</tspan>
+    <tspan x="734" dy="15">(SetThreadContext).</tspan>
+  </text>
+
+  <!-- ===== Card 5: Resume (navy, with forward arrow) ===== -->
+  <rect x="844" y="30" width="188" height="362" rx="3" fill="#E8E8E8"/>
+  <rect x="844" y="132" width="188" height="100" fill="#1A4B6C"/>
+  <rect x="844" y="400" width="188" height="5" rx="2" fill="#1A4B6C"/>
+  <g transform="translate(938,80)" fill="none" stroke="#1A4B6C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="0" r="17"/>
+    <path d="M-5 -8 L10 0 L-5 8 Z" fill="#1A4B6C" stroke="none"/>
+  </g>
+  <circle cx="877" cy="182" r="19" fill="none" stroke="#ffffff" stroke-width="2.4"/>
+  <text x="877" y="187" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">05</text>
+  <text x="904" y="188" font-size="16.5" font-weight="bold" fill="#ffffff">Resume</text>
+  <text x="938" y="266" font-size="11" fill="#555555" text-anchor="middle">
+    <tspan x="938" dy="0">Resume the thread.</tspan>
+    <tspan x="938" dy="15">The RAT runs inside;</tspan>
+    <tspan x="938" dy="15">the injector exits.</tspan>
+  </text>
+</svg>

@@ -1,0 +1,16 @@
+type,indicator,context
+sha256,0AF84CC7993EB64D51A1CE695C43749E1635B5040F17D6CAE1DA4B574DC88658,Main sample (XWorm loader / .NET PE32)
+md5,2BAC31A29BE8885E900083AEBB6C2CAD,Main sample
+sha1,DD108B8A271095BCF42AB3C69F57D9A229B33373,Main sample
+ipv4,217.195.153.81,C2 server
+port,50000,C2 port (TCP)
+c2,217.195.153.81:50000,C2 endpoint (AES-encrypted beaconing every ~12s)
+filepath,C:\Users\<user>\AppData\Local\Local Studio\,Folder the malware copies itself to
+scheduled_task,SystemHealthMonitor,Persistence task (runs at logon). Name varies.
+scheduled_task,UserSessionManager,Persistence task name seen in ANY.RUN. Name varies.
+lolbin,schtasks.exe,Used to create the logon persistence task
+lolbin,jsc.exe,Microsoft JScript.NET compiler abused by the malware
+dotnet_assembly,LX_T5E5YyrS_XBY,Loader assembly name
+dotnet_namespace,SIL.Harmony,Borrowed library name used as camouflage in the loader
+dotnet_namespace,AudioSynthesizerCore,Namespace of the unpacked second stage (process-hollowing injector)
+technique,Process Hollowing,Second stage injects into another process

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1110" height="360" viewBox="0 0 1110 360" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1110" height="360" fill="#ffffff"/>
+
+  <!-- connectors -->
+  <g fill="none" stroke="#9aa6ad" stroke-width="2.4" stroke-linecap="round">
+    <path d="M555 88 L555 130"/>
+    <path d="M555 194 L555 222"/>
+    <path d="M190 222 L920 222"/>
+    <path d="M190 222 L190 250"/>
+    <path d="M555 222 L555 250"/>
+    <path d="M920 222 L920 250"/>
+  </g>
+  <g fill="none" stroke="#9aa6ad" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M551 124 L555 130 L559 124"/>
+    <path d="M186 244 L190 250 L194 244"/>
+    <path d="M551 244 L555 250 L559 244"/>
+    <path d="M916 244 L920 250 L924 244"/>
+  </g>
+
+  <!-- explorer.exe (trusted parent) -->
+  <rect x="425" y="28" width="260" height="60" rx="10" fill="#1A4B6C"/>
+  <g transform="translate(455,58)" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-14 -7 L-4 -7 L-1 -3 L14 -3 L14 9 L-14 9 Z"/>
+  </g>
+  <text x="481" y="53" font-size="14" font-weight="bold" fill="#ffffff" font-family="Consolas, 'Courier New', monospace">explorer.exe</text>
+  <text x="481" y="71" font-size="11" fill="#ffffff" fill-opacity="0.85">Windows shell (trusted parent)</text>
+
+  <!-- the malware -->
+  <rect x="425" y="130" width="260" height="64" rx="10" fill="#DC3F52"/>
+  <g transform="translate(455,162)" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="0" cy="2" rx="7" ry="9"/>
+    <circle cx="0" cy="-9" r="3"/>
+    <path d="M-2 -12 L-5 -17 M2 -12 L5 -17"/>
+    <path d="M-7 -1 L-14 -5 M-7 4 L-15 4 M-7 9 L-14 13 M7 -1 L14 -5 M7 4 L15 4 M7 9 L14 13"/>
+  </g>
+  <text x="481" y="157" font-size="14" font-weight="bold" fill="#ffffff">the malware</text>
+  <text x="481" y="176" font-size="11.5" fill="#ffffff" fill-opacity="0.9" font-family="Consolas, 'Courier New', monospace">0af84cc….exe</text>
+
+  <!-- child 1: schtasks query -->
+  <rect x="40" y="250" width="300" height="72" rx="10" fill="#3599B1"/>
+  <g transform="translate(70,286)" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="-3" cy="-3" r="7"/>
+    <path d="M2 2 L9 9"/>
+  </g>
+  <text x="96" y="281" font-size="14" font-weight="bold" fill="#ffffff" font-family="Consolas, 'Courier New', monospace">schtasks.exe</text>
+  <text x="96" y="300" font-size="11.5" fill="#ffffff" fill-opacity="0.9">query: does my task exist?</text>
+
+  <!-- child 2: schtasks create -->
+  <rect x="405" y="250" width="300" height="72" rx="10" fill="#3599B1"/>
+  <g transform="translate(435,286)" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="-1" cy="0" r="9"/>
+    <path d="M-1 0 L-1 -6 M-1 0 L4 2"/>
+    <path d="M10 -10 L10 -4 M7 -7 L13 -7"/>
+  </g>
+  <text x="461" y="281" font-size="14" font-weight="bold" fill="#ffffff" font-family="Consolas, 'Courier New', monospace">schtasks.exe</text>
+  <text x="461" y="300" font-size="11.5" fill="#ffffff" fill-opacity="0.9">create: make a logon task</text>
+
+  <!-- child 3: jsc.exe -->
+  <rect x="770" y="250" width="300" height="72" rx="10" fill="#30679D"/>
+  <g transform="translate(800,286)" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="0" r="6"/>
+    <circle cx="0" cy="0" r="2"/>
+    <path d="M0 -11 L0 -6 M0 11 L0 6 M-11 0 L-6 0 M11 0 L6 0 M-8 -8 L-4 -4 M8 8 L4 4 M-8 8 L-4 4 M8 -8 L4 -4"/>
+  </g>
+  <text x="826" y="281" font-size="14" font-weight="bold" fill="#ffffff" font-family="Consolas, 'Courier New', monospace">jsc.exe</text>
+  <text x="826" y="300" font-size="11.5" fill="#ffffff" fill-opacity="0.9">Microsoft .NET tool (LOLBin)</text>
+</svg>

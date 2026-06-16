@@ -1,0 +1,10 @@
+*.exe
+*.dll
+*.bin
+*.zip
+*.pcap
+stage2*
+
+# OS junk
+.DS_Store
+Thumbs.db
